@@ -97,7 +97,12 @@ Python などを別に入れる必要はありません（アプリ専用の Pyt
 | OpenSSL 3.0.16（Python の中） | Apache-2.0 |
 | bzip2 1.0.8（Python の中） | bzip2 License（BSD 系） |
 | libffi（Python の中） | MIT |
-| SQLite 3.49.1・zlib 1.3.1・Expat 2.7.1・liblzma（xz）・libmpdec 2.5.1・HACL\*（Python の中） | それぞれ public domain・zlib・MIT・0BSD／public domain・BSD-2-Clause・MIT  |
+| zlib 1.3.1（Python の中） | zlib License |
+| Expat 2.7.1（Python の中） | MIT |
+| libmpdec 2.5.1（Python の中） | BSD-2-Clause |
+| SQLite 3.49.1（Python の中） | パブリックドメイン |
+| liblzma（xz 5.2.5・Python の中） | パブリックドメイン |
+| HACL\*（Python の中。Copyright (c) 2016-2022 INRIA, CMU and Microsoft Corporation・Copyright (c) 2022-2023 HACL* Contributors） | MIT |
 
 **ライブラリ（`python\lib\`）**
 
@@ -106,8 +111,8 @@ Python などを別に入れる必要はありません（アプリ専用の Pyt
 | pykakasi | 2.3.0 | GPL-3.0 |
 | vosk | 0.3.45 | Apache-2.0 |
 | Kaldi（vosk の libvosk.dll の中） | — | Apache-2.0 |
-| libgcc・libstdc++（vosk の中の libgcc_s_seh-1.dll・libstdc++-6.dll） | GCC 10 | GPL-3.0-or-later と GCC Runtime Library Exception 3.1 |
-| libwinpthread（vosk の中の libwinpthread-1.dll） | mingw-w64 | MIT 系（mingw-w64） |
+| libgcc・libstdc++（vosk の中の libgcc_s_seh-1.dll・libstdc++-6.dll） | GCC 10（gcc-mingw-w64 24.2） | GPL-3.0-or-later と GCC Runtime Library Exception 3.1 |
+| libwinpthread（vosk の中の libwinpthread-1.dll） | mingw-w64 8.0.0 | MIT 系（mingw-w64）と BSD 系（Lockless Inc. から来た部分） |
 | sherpa-onnx・sherpa-onnx-core | 2.0.1 | Apache-2.0 |
 | ONNX Runtime（sherpa-onnx の中の onnxruntime.dll） | — | MIT |
 | sounddevice | 0.5.6 | MIT |
@@ -129,7 +134,7 @@ Python などを別に入れる必要はありません（アプリ専用の Pyt
 
 **GCC の部品の元のソース**
 libgcc・libstdc++・libwinpthread は、vosk に入っている形のまま（作り直さずに）配っています。
-元のソースは GCC 10（DLL の中の表示は「GCC: (GNU) 10-posix 20210110」）と mingw-w64 の公開しているものです（<公開場所>）。
+元のソースは GCC 10（DLL の中の表示は「GCC: (GNU) 10-posix 20210110」）と mingw-w64 8.0.0 の公開しているもので、https://gcc.gnu.org/ と https://www.mingw-w64.org/ で手に入ります。
 
 ## 使用する際にダウンロードされるもの
 

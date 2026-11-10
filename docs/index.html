@@ -48,7 +48,7 @@ li { margin: 4px 0; }
 }
 .btn strong { display: block; font-size: 1.15rem; }
 .btn span { display: block; font-size: 0.92rem; margin-top: 4px; }
-/* ボタンの文字は FULL・UPDATE の 1 語なので、縦の真ん中に寄せる */
+/* ボタンの中の 2 行（大きい文字と小さい文字）を、縦の真ん中に寄せる */
 .btn { display: flex; flex-direction: column; justify-content: center; }
 .btn.main { background: var(--accent); color: var(--accent-text); }
 .btn.sub { background: var(--accent2); color: var(--accent2-text); }
@@ -75,13 +75,14 @@ code {
 
 <header>
   <h1>こえきゃぷ <small>(KoeCap) for OBS</small></h1>
-  <p class="lead">声で話した「いまやっていること」を、OBS の画面に字幕として出す拡張機能です。</p>
+  <p class="lead">声で話した「いまやっていること」を字幕として出すOBS拡張機能です。</p>
 </header>
 
 <section>
   <h2>できること</h2>
   <ul>
-    <li>キーワードで、OBS の操作もできます</li>
+    <li>字幕の操作が声でできます</li>
+    <li>キーワードで、OBSの操作もできます</li>
   </ul>
 </section>
 
@@ -89,11 +90,12 @@ code {
   <h2>ダウンロード（最新の版）</h2>
   <div class="buttons">
     <a class="btn main" href="https://github.com/kurus-es/koecap/releases/latest/download/KoeCap.zip">
-      <strong>FULL</strong>
+      <strong>はじめての方</strong>
+      <span>こえきゃぷをダウンロード</span>
     </a>
     <a class="btn sub" href="https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-update-from-0.20.zip">
-      <strong>UPDATE</strong>
-      <span>更新の zip（0.3.0 以降を使っている方）</span>
+      <strong>使っている方</strong>
+      <span>最新の版に更新（0.3.0 以降）</span>
     </a>
   </div>
 </section>

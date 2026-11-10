@@ -113,3 +113,9 @@ GCC 10・mingw-w64 8.0.0。Debian 系の mingw-w64 クロスコンパイラで�
 |---|---|---|---|
 | Vosk の日本語モデル small-ja 0.22 | `model` フォルダが無いとき | alphacephei.com | Apache-2.0 |
 | ReazonSpeech の k2 モデル | 認識の方式が「高精度」で、`reazonspeech` フォルダが足りないとき | github.com/k2-fsa/sherpa-onnx | Apache-2.0 |
+
+## 最新の版
+
+最新の版: 0.3.0
+
+困ったときは [Issues](../../issues) へ。報告用の zip には聞こえた言葉やキーワードの言葉が入るので、人に見せてよいか確かめてから添えてください。

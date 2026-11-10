@@ -11,6 +11,7 @@
 
 - [**はじめての方**　こえきゃぷをダウンロード](https://github.com/kurus-es/koecap/releases/latest/download/KoeCap.zip)
 - [**使っている方**　最新の版に更新](https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-update.zip)
+- [**ソースコード**　最新のソース](https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-source.zip)
 
 ## インストール
 
@@ -46,7 +47,7 @@
 
 ### こえきゃぷ本体
 
-こえきゃぷは **GNU General Public License version 3** で配布します。
+こえきゃぷは [**GNU General Public License version 3**](LICENSE.txt) で配布します。
 同梱の pykakasi が同じライセンスのためです。ソースコードは、各版のソースの zip です。
 
 こえきゃぷは無保証です。使ったこと・使えなかったことで起きたことについて、作成者は責任を負いません。

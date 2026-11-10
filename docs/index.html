@@ -9,12 +9,10 @@
   GitHub Pages の下書き（main の docs/ を公開する形）。
   外と通信しないページにするため、外の CSS・フォント・JS・アクセスを数える仕組み・フォームは入れない。
   ボタンとソースのリンクは releases/latest/download/<固定の名前> を指すので、版が上がってもこのページは直さなくてよい
-  （そのかわり Releases に固定の名前の写し KoeCap.zip・KoeCap-source.zip・KoeCap-update-from-<元の版>.zip も付ける）。
-  更新の zip は元の版からの差だけで、元の版が違う人が当てると古いファイルが残って気づきにくい。
-  そこで更新の写しは元の版を名前に入れる。元の版が替わると前の名前は latest から消えて 404 で止まり、合わない zip を黙って配らない。
-  元の版が替わる安定版を出すときだけ、このページの更新のボタンの先（KoeCap-update-from-<元の版>.zip）を直す。
-  ボタンの下の「0.3.0 以降を使っている方」は利用者の決め（2026-11-10。0.2.x の人は少人数で直接話すので、元の版 0.20 と
-  合っていなくてよい）。release_check.py はボタンの先だけを更新の zip の元の版と比べる。
+  （そのかわり Releases に固定の名前の写し KoeCap.zip・KoeCap-update.zip・KoeCap-source.zip も付ける）。
+  更新の写しは元の版が替わっても同じ名前 KoeCap-update.zip（利用者の決め・2026-11-10）。更新の zip は元の版からの差だけなので、
+  元の版が違う人が当てると古いファイルが残る。どの版から上げられるかは、ボタンの下の「〇〇 以降」と Release の説明で示す
+  （0.2.x の人とは利用者が直接話すので、ボタンの下の文は元の版と合っていなくてよい）。版が上がってもこのページの先は直さない。
 -->
 <style>
 /* PC の明るい・暗いの設定に関係なく、いつも暗い色で出す（利用者の頼み・2026-11-10）。
@@ -93,7 +91,7 @@ code {
       <strong>はじめての方</strong>
       <span>こえきゃぷをダウンロード</span>
     </a>
-    <a class="btn sub" href="https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-update-from-0.20.zip">
+    <a class="btn sub" href="https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-update.zip">
       <strong>使っている方</strong>
       <span>最新の版に更新（0.3.0 以降）</span>
     </a>

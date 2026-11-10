@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>こえきゃぷ (KoeCap) for OBS</title>
+<meta name="description" content="声で話したことを OBS の画面に字幕として出す Windows 用のアプリ。ダウンロードと入れ方。">
+<!--
+  GitHub Pages の下書き（main の docs/ を公開する形）。
+  外と通信しないページにするため、外の CSS・フォント・JS・アクセスを数える仕組み・フォームは入れない。
+  ボタンとソースのリンクは releases/latest/download/<固定の名前> を指すので、版が上がってもこのページは直さなくてよい
+  （そのかわり Releases に固定の名前の写し KoeCap.zip・KoeCap-source.zip・KoeCap-update-from-<元の版>.zip も付ける）。
+  更新の zip は元の版からの差だけで、元の版が違う人が当てると古いファイルが残って気づきにくい。
+  そこで更新の写しは元の版を名前に入れる。元の版が替わると前の名前は latest から消えて 404 で止まり、合わない zip を黙って配らない。
+  元の版が替わる版（0.20 → 0.3.0）を出すときだけ、このページの更新のボタンの名前と「〇〇 以降」を直す。
+-->
+<style>
+:root {
+  --bg: #f7f8fa; --card: #ffffff; --text: #1d2330; --sub: #5a6375; --line: #dde1e8;
+  --accent: #2f6fdb; --accent-text: #ffffff; --accent2: #e9effb; --accent2-text: #1f4fa3;
+  --note: #fff6e0; --note-line: #f0d48a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15181e; --card: #1e232b; --text: #e6e9ef; --sub: #a3abb9; --line: #333a46;
+    --accent: #5b93f0; --accent-text: #0e1420; --accent2: #263247; --accent2-text: #b9cff7;
+    --note: #2d2818; --note-line: #6b5a26;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: "Yu Gothic UI", "Meiryo", "Hiragino Sans", system-ui, sans-serif;
+  line-height: 1.75; font-size: 16px;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; }
+header h1 { font-size: 1.9rem; line-height: 1.3; margin: 0 0 4px; }
+header h1 small { font-size: 1rem; color: var(--sub); font-weight: normal; }
+.lead { font-size: 1.1rem; margin: 12px 0 0; }
+section {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 20px 20px 16px; margin-top: 20px;
+}
+h2 { font-size: 1.25rem; margin: 0 0 10px; }
+ul, ol { margin: 0; padding-left: 1.4em; }
+li { margin: 4px 0; }
+.buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+.btn {
+  display: block; text-decoration: none; border-radius: 10px; padding: 16px 18px;
+  border: 2px solid var(--accent); min-height: 96px;
+}
+.btn strong { display: block; font-size: 1.15rem; }
+.btn span { display: block; font-size: 0.92rem; margin-top: 4px; }
+.btn.main { background: var(--accent); color: var(--accent-text); }
+.btn.sub { background: var(--accent2); color: var(--accent2-text); }
+.btn:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
+.btn:hover { filter: brightness(1.06); }
+.small { font-size: 0.92rem; color: var(--sub); margin: 10px 0 0; }
+a { color: var(--accent); }
+.btn.main { color: var(--accent-text); }
+.btn.sub { color: var(--accent2-text); }
+code {
+  font-family: Consolas, monospace; background: var(--accent2); color: var(--accent2-text);
+  padding: 1px 6px; border-radius: 4px; font-size: 0.95em; overflow-wrap: anywhere;
+}
+.note {
+  background: var(--note); border: 1px solid var(--note-line); border-radius: 8px;
+  padding: 10px 14px; margin-top: 12px; font-size: 0.95rem;
+}
+@media (max-width: 560px) {
+  .wrap { padding-top: 20px; }
+  header h1 { font-size: 1.55rem; }
+  .buttons { grid-template-columns: 1fr; }
+  section { padding: 16px 14px 12px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>こえきゃぷ <small>(KoeCap) for OBS</small></h1>
+  <p class="lead">声で話した「いまやっていること」を、OBS の画面に字幕として出す Windows 用のアプリです。</p>
+</header>
+
+<section>
+  <h2>できること</h2>
+  <ul>
+    <li>キーワード（例:「いまやっていることは」）のあとに話した 1 文が、字幕になります。</li>
+    <li>キーワードで、字幕を消す・ひとつ前に戻す・OBS のホットキーを押す などの操作もできます（声のコマンド）。</li>
+    <li>声の聞き取りは、このパソコンの中だけでします。声・字幕・設定をインターネットに送ることはありません。</li>
+  </ul>
+</section>
+
+<section>
+  <h2>ダウンロード（最新の版）</h2>
+  <div class="buttons">
+    <a class="btn main" href="https://github.com/kurus-es/koecap/releases/latest/download/KoeCap.zip">
+      <strong>はじめての方</strong>
+      <span>全部入りの zip</span>
+    </a>
+    <a class="btn sub" href="https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-update-from-0.20.zip">
+      <strong>前の版から更新する方</strong>
+      <span>更新の zip（0.20 以降を使っている方）</span>
+    </a>
+  </div>
+  <p class="small">それより前の版を使っている方は、「はじめての方」の zip を使うか、<a href="https://github.com/kurus-es/koecap/releases">Releases</a> の説明を見てください。版ごとに変わったことと前の版の zip も Releases にあります。</p>
+</section>
+
+<section>
+  <h2>入れ方</h2>
+  <ol>
+    <li><strong>zip を展開する</strong><br>
+      できた <code>KoeCap</code> フォルダを好きな場所に置きます（例: <code>ドキュメント\KoeCap</code>）。</li>
+    <li><strong>OBS にスクリプトを足す</strong><br>
+      OBS の「ツール」→「スクリプト」→「＋」→ <code>KoeCap</code> フォルダの <code>koecap.lua</code> を選びます。<br>
+      はじめての時は、音声モデルのダウンロードを始めます（数分。待つだけで大丈夫です）。<br>
+      このとき「アプリを再起動」は押さなくてかまいません（押すとダウンロードがやり直しになります）。</li>
+    <li><strong>OBS にドックを足す</strong><br>
+      OBS の「ドック」→「カスタムブラウザドック」で、ドック名に <code>こえきゃぷ</code>、URL に <code>http://localhost:8765/</code> と書いて「適用」を押します。</li>
+  </ol>
+  <p class="small">そのあと、ドックの「⚙」→「出力先」→「テキスト(GDI+)を追加」で字幕が出せます。くわしい使い方は zip の中の <code>README.txt</code> にあります。うまく動かないときは、<code>README.txt</code> の「7. 困ったとき」を見てください。</p>
+  <div class="note">
+    <strong>更新するとき</strong>: OBS を閉じてから、更新の zip の中の <code>KoeCap</code> フォルダの<strong>中身</strong>を、今の <code>KoeCap</code> フォルダに上書きでコピーします。設定は消えません。
+  </div>
+</section>
+
+<section>
+  <h2>動かすのに必要なもの</h2>
+  <ul>
+    <li>Windows 10 / 11（64bit）</li>
+    <li>OBS Studio 30 以降</li>
+    <li>インターネット（はじめに音声モデル 約 730 MB をダウンロードするときだけ）</li>
+    <li>ディスク 約 400 MB・パソコンのメモリ 8 GB 以上（ゲームを配信するときは 16 GB 以上をおすすめ。こえきゃぷは約 2 GB を使います）</li>
+  </ul>
+  <p class="small">Python などを別に入れる必要はありません（アプリ専用の Python が zip に入っています）。</p>
+</section>
+
+<section>
+  <h2>ライセンス・ソースコード</h2>
+  <ul>
+    <li>こえきゃぷは <a href="https://github.com/kurus-es/koecap/blob/main/LICENSE.txt">GPL-3.0</a> で配布しています。無保証です。</li>
+    <li>zip に入っている部品と、使うときにダウンロードされる音声モデルのライセンスは <a href="https://github.com/kurus-es/koecap#ライセンス">こちらの一覧</a>。</li>
+    <li>ソースコード: <a href="https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-source.zip">最新の版のソースの zip</a>（ほかの版は Releases に）。</li>
+  </ul>
+</section>
+
+</div>
+</body>
+</html>

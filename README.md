@@ -87,6 +87,7 @@ Python などを別に入れる必要はありません（アプリ専用の Pyt
 ### zip に入っている部品
 
 ライセンス文は zip の `python\licenses\<名前>\` に、Python 本体とその中の部品のものは `python\LICENSE.txt` にあります。
+zlib・Expat・libmpdec・HACL\* の 4 つは、`python\LICENSE.txt` に文が無いため、文の全体を zip の `licenses\python-extra\` に入れています。
 
 **Python 本体（`python\`）**
 
@@ -94,15 +95,15 @@ Python などを別に入れる必要はありません（アプリ専用の Pyt
 |---|---|
 | Python 3.12.10（Python 公式の Windows 用の埋め込み版） | PSF License（Python Software Foundation License Version 2） |
 | Microsoft Visual C++ のランタイム（vcruntime140.dll・vcruntime140_1.dll） | Microsoft の再頒布可能コード（条件は `python\LICENSE.txt`） |
-| OpenSSL 3.0.16（Python の中） | Apache-2.0 |
+| OpenSSL 3.0.16（Python の中） | Apache-2.0（文は `python\LICENSE.txt` にある） |
 | bzip2 1.0.8（Python の中） | bzip2 License（BSD 系） |
 | libffi（Python の中） | MIT |
-| zlib 1.3.1（Python の中） | zlib License |
-| Expat 2.7.1（Python の中） | MIT |
-| libmpdec 2.5.1（Python の中） | BSD-2-Clause |
+| zlib 1.3.1（Python の中） | zlib License（文の全体は `licenses\python-extra\zlib.txt`） |
+| Expat 2.7.1（Python の中） | MIT 系（文の全体は `licenses\python-extra\expat.txt`） |
+| libmpdec 2.5.1（Python の中） | BSD 系 2 か条（文の全体は `licenses\python-extra\libmpdec.txt`） |
 | SQLite 3.49.1（Python の中） | パブリックドメイン |
 | liblzma（xz 5.2.5・Python の中） | パブリックドメイン |
-| HACL\*（Python の中。Copyright (c) 2016-2022 INRIA, CMU and Microsoft Corporation・Copyright (c) 2022-2023 HACL* Contributors） | MIT |
+| HACL\*（Python の中） | MIT（INRIA, CMU and Microsoft Corporation／HACL\* Contributors。文の全体は `licenses\python-extra\hacl-star.txt`） |
 
 **ライブラリ（`python\lib\`）**
 
@@ -111,8 +112,8 @@ Python などを別に入れる必要はありません（アプリ専用の Pyt
 | pykakasi | 2.3.0 | GPL-3.0 |
 | vosk | 0.3.45 | Apache-2.0 |
 | Kaldi（vosk の libvosk.dll の中） | — | Apache-2.0 |
-| libgcc・libstdc++（vosk の中の libgcc_s_seh-1.dll・libstdc++-6.dll） | GCC 10（gcc-mingw-w64 24.2） | GPL-3.0-or-later と GCC Runtime Library Exception 3.1 |
-| libwinpthread（vosk の中の libwinpthread-1.dll） | mingw-w64 8.0.0 | MIT 系（mingw-w64）と BSD 系（Lockless Inc. から来た部分） |
+| libgcc・libstdc++（vosk の中の libgcc_s_seh-1.dll・libstdc++-6.dll） | GCC 10 | GPL 3 ＋ GCC Runtime Library Exception 3.1 |
+| libwinpthread（vosk の中の libwinpthread-1.dll） | mingw-w64 8.0.0 | MIT 系 ＋ BSD 系 3 か条（Lockless Inc.） |
 | sherpa-onnx・sherpa-onnx-core | 2.0.1 | Apache-2.0 |
 | ONNX Runtime（sherpa-onnx の中の onnxruntime.dll） | — | MIT |
 | sounddevice | 0.5.6 | MIT |
@@ -134,7 +135,8 @@ Python などを別に入れる必要はありません（アプリ専用の Pyt
 
 **GCC の部品の元のソース**
 libgcc・libstdc++・libwinpthread は、vosk に入っている形のまま（作り直さずに）配っています。
-元のソースは GCC 10（DLL の中の表示は「GCC: (GNU) 10-posix 20210110」）と mingw-w64 8.0.0 の公開しているもので、https://gcc.gnu.org/ と https://www.mingw-w64.org/ で手に入ります。
+GCC 10（gcc-10 の枝の 2021-01-10 の写し）・mingw-w64 8.0.0。Debian 系の mingw-w64 クロスコンパイラ（gcc-mingw-w64 24.2）で作られたものです。
+元のソースは https://gcc.gnu.org/ と https://www.mingw-w64.org/ で手に入ります。
 
 ## 使用する際にダウンロードされるもの
 

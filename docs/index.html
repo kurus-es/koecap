@@ -15,17 +15,13 @@
   元の版が替わる版（0.20 → 0.3.0）を出すときだけ、このページの更新のボタンの名前と「〇〇 以降」を直す。
 -->
 <style>
+/* PC の明るい・暗いの設定に関係なく、いつも暗い色で出す（利用者の頼み・2026-11-10）。
+   color-scheme で、ブラウザが描く部分（スクロールバーなど）も暗い色にそろえる */
 :root {
-  --bg: #f7f8fa; --card: #ffffff; --text: #1d2330; --sub: #5a6375; --line: #dde1e8;
-  --accent: #2f6fdb; --accent-text: #ffffff; --accent2: #e9effb; --accent2-text: #1f4fa3;
-  --note: #fff6e0; --note-line: #f0d48a;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #15181e; --card: #1e232b; --text: #e6e9ef; --sub: #a3abb9; --line: #333a46;
-    --accent: #5b93f0; --accent-text: #0e1420; --accent2: #263247; --accent2-text: #b9cff7;
-    --note: #2d2818; --note-line: #6b5a26;
-  }
+  color-scheme: dark;
+  --bg: #15181e; --card: #1e232b; --text: #e6e9ef; --sub: #a3abb9; --line: #333a46;
+  --accent: #5b93f0; --accent-text: #0e1420; --accent2: #263247; --accent2-text: #b9cff7;
+  --note: #2d2818; --note-line: #6b5a26;
 }
 * { box-sizing: border-box; }
 body {

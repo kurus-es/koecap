@@ -78,13 +78,13 @@ zlib・Expat・libmpdec・HACL\* の 4 つは、`python\LICENSE.txt` に文が�
 |---|---|---|
 | pykakasi | 2.3.0 | GPL-3.0 |
 | vosk | 0.3.45 | Apache-2.0 |
-| Kaldi | — | Apache-2.0 |
-| libgcc・libstdc++ | GCC 10 | GPL 3 ＋ GCC Runtime Library Exception 3.1 |
-| libwinpthread | mingw-w64 8.0.0 | MIT 系 ＋ BSD 系 3 か条 |
+| Kaldi | ※vosk 同梱 | Apache-2.0 |
+| libgcc・libstdc++ | ※vosk 同梱 | GPL 3 ＋ GCC Runtime Library Exception 3.1 |
+| libwinpthread | ※vosk 同梱 | MIT 系 ＋ BSD 系 3 か条 |
 | sherpa-onnx・sherpa-onnx-core | 2.0.1 | Apache-2.0 |
-| ONNX Runtime | — | MIT |
+| ONNX Runtime | ※sherpa-onnx 同梱 | MIT |
 | sounddevice | 0.5.6 | MIT |
-| PortAudio | — | MIT 系 |
+| PortAudio | ※sounddevice 同梱 | MIT 系 |
 | requests | 2.34.2 | Apache-2.0 |
 | certifi | 2026.10.23 | MPL-2.0 |
 | tqdm | 4.70.1 | MIT と MPL-2.0 |

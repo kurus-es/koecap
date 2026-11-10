@@ -100,19 +100,16 @@ zlib・Expat・libmpdec・HACL\* の 4 つは、`python\LICENSE.txt` に文が�
 | pycparser | 3.12 | BSD-3-Clause |
 | wrapt | 2.5.1 | BSD-2-Clause |
 
-**GCC の部品の元のソース**
-libgcc・libstdc++・libwinpthread は、vosk に入っている形のまま配っています。
-GCC 10・mingw-w64 8.0.0。Debian 系の mingw-w64 クロスコンパイラで作られた DLL です。
-元のソースは https://gcc.gnu.org/ と https://www.mingw-w64.org/ で手に入ります。
+libgcc・libstdc++・libwinpthread の元のソースは https://gcc.gnu.org/ と https://www.mingw-w64.org/ で手に入ります。
 
 ## 使用する際にダウンロードされるファイル
 
 次のファイルは zip に入っていません。こえきゃぷがはじめて使うときに、使う人のパソコンへ配布元から直接ダウンロードします。ライセンスは配布元の表示によります。
 
-| モデル | いつ | 配布元 | ライセンス |
-|---|---|---|---|
-| Vosk の日本語モデル small-ja 0.22 | `model` フォルダが無いとき | alphacephei.com | Apache-2.0 |
-| ReazonSpeech の k2 モデル | 認識の方式が「高精度」で、`reazonspeech` フォルダが足りないとき | github.com/k2-fsa/sherpa-onnx | Apache-2.0 |
+| モデル | 配布元 | ライセンス |
+|---|---|---|
+| Vosk の日本語モデル small-ja 0.22 | alphacephei.com | Apache-2.0 |
+| ReazonSpeech の k2 モデル | github.com/k2-fsa/sherpa-onnx | Apache-2.0 |
 
 ## 最新の版
 

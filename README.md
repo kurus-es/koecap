@@ -53,9 +53,6 @@
 
 ### ソフトウェア・ライブラリ他
 
-ライセンス文は zip の `python\licenses\<名前>\` に、Python 本体とその中のソフトウェアのライセンス文は `python\LICENSE.txt` にあります。
-zlib・Expat・libmpdec・HACL\* の 4 つは、`python\LICENSE.txt` に文が無いため、文の全体を zip の `licenses\python-extra\` に入れています。
-
 **Python 本体**
 
 | ソフトウェア | ライセンス |

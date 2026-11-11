@@ -13,6 +13,8 @@
 - [**使っている方**　最新の版に更新](https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-update.zip)
 - [**ソースコード**　最新のソース](https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-source.zip)
 
+0.3.0 より前の版を使っている方は、先に [0.3.0 の更新の zip](https://github.com/kurus-es/koecap/releases/tag/v0.3.0) を当てるか、「はじめての方」の zip を使ってください。
+
 ## インストール
 
 1. **zip を展開する**  
@@ -111,6 +113,6 @@ libgcc・libstdc++・libwinpthread の元のソースは https://gcc.gnu.org/ �
 
 ## 最新の版と問い合わせ
 
-最新の版: 0.3.0
+最新の版: 0.3.1
 
 困ったときは [Issues](../../issues) へ。報告用の zip には聞こえた言葉やキーワードの言葉が入るので、人に見せてよいか確かめてから添えてください。

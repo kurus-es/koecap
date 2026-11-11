@@ -13,7 +13,7 @@
 - [**使っている方**　最新の版に更新](https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-update.zip)
 - [**ソースコード**　最新のソース](https://github.com/kurus-es/koecap/releases/latest/download/KoeCap-source.zip)
 
-0.3.0 より前の版を使っている方は、先に [0.3.0 の更新の zip](https://github.com/kurus-es/koecap/releases/tag/v0.3.0) を当てるか、「はじめての方」の zip を使ってください。
+0.3.0 より前の版を使っている方は、先に [0.3.0 の更新の zip](https://github.com/kurus-es/koecap/releases/tag/v0.3.0) で 0.3.0 にするか、「はじめての方」の zip を使ってください。
 
 ## インストール
 

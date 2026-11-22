@@ -9,6 +9,8 @@
   GitHub Pages の下書き（main の docs/ を公開する形）。
   外と通信しないページにするため、外の CSS・フォント・JS・アクセスを数える仕組み・フォームは入れない。
   ボタンとソースのリンクは releases/latest/download/<固定の名前> を指すので、版が上がってもこのページは直さなくてよい
+  先行版のボタンは releases/download/preview/<固定の名前>（固定のタグ preview の pre-release）を指すので、先行版が上がっても直さなくてよい。
+  次の正式版を出すときは先行版の段を外す（古い先行版のボタンを残さない・2026-11-22 利用者「先行版ボタンをたしてください」）
   （そのかわり Releases に固定の名前の写し KoeCap.zip・KoeCap-update.zip・KoeCap-source.zip も付ける）。
   更新の写しは元の版が替わっても同じ名前 KoeCap-update.zip（利用者の決め・2026-11-10）。更新の zip は元の版からの差だけなので、
   元の版が違う人が当てると古いファイルが残る。どの版から上げられるかは、ボタンの下の「〇〇 以降」と Release の説明で示す
@@ -97,6 +99,23 @@ code {
     </a>
   </div>
   <p class="small">0.3.0 より前の版を使っている方は、先に <a href="https://github.com/kurus-es/koecap/releases/tag/v0.3.0">0.3.0 の更新の zip</a> で 0.3.0 にするか、「はじめての方」の zip を使ってください。</p>
+</section>
+
+<section>
+  <h2>ダウンロード（先行版）</h2>
+  <p class="small">新しい機能を先に試せる版です。ふだん使うなら、上の「最新の版」を使ってください。</p>
+  <div class="buttons">
+    <a class="btn sub" href="https://github.com/kurus-es/koecap/releases/download/preview/KoeCap-preview.zip">
+      <strong>はじめての方（先行版）</strong>
+      <span>先行版をダウンロード</span>
+    </a>
+    <a class="btn sub" href="https://github.com/kurus-es/koecap/releases/download/preview/KoeCap-preview-update.zip">
+      <strong>使っている方（先行版）</strong>
+      <span>先行版に更新（0.4.0 以降）</span>
+    </a>
+  </div>
+  <p class="small">変わったことは <a href="https://github.com/kurus-es/koecap/releases/tag/preview">先行版の Release</a> にあります。</p>
+  <p class="small">0.4.0 より前の版を使っている方は、先に上の「使っている方」で最新の版にするか、「はじめての方（先行版）」の zip を使ってください。</p>
 </section>
 
 <section>
